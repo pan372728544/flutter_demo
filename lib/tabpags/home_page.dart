@@ -11,8 +11,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<Map<String, dynamic>> _list = [
     {"title": "provider的使用", "url": "/provider", "params": {'id':"4.3.2"}},
-    {"title": "sliver-CustomScrollView", "url": "/sliver","params":{}},
-    {"title": "sliver-NestedScrollView", "url": "/sliver2","params":{}},
+    {"title": "CustomScrollView", "url": "/sliver","params":{}},
+    {"title": "NestedScrollView", "url": "/sliver2","params":{}},
+    {"title": "Official-NestedScrollView", "url": "/official","params":{}},
+    {"title": "刷新", "url": "/refresh","params":{}},
   ];
 
   @override

@@ -51,7 +51,7 @@ class _SliverPageState extends State<SliverPage>
                   controller: this.tabController,
                   tabs: <Widget>[
                     Tab(text: "Home",),
-                    Tab(text: 'SETTING'),
+                    Tab(text: 'Setting'),
                   ],
                 ),
               )
@@ -83,6 +83,7 @@ class _SliverPageState extends State<SliverPage>
           /// SliverToBoxAdapter包含ListView，滑动会出现问题，可以使用NestedScrollview解决
           SliverToBoxAdapter(
               child: ListView.builder(
+                padding: EdgeInsets.all(0),
                 shrinkWrap: true,
             itemBuilder: (context, index) {
               return Container(
@@ -148,7 +149,7 @@ class _SliverPageState extends State<SliverPage>
 }
 
 class PersistentDelegate extends SliverPersistentHeaderDelegate {
-  final Material child;
+  final Widget child;
 
   PersistentDelegate({@required this.child});
 
@@ -156,7 +157,7 @@ class PersistentDelegate extends SliverPersistentHeaderDelegate {
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     // TODO: implement build
-    return Center(child: this.child);
+    return this.child;
   }
 
   @override

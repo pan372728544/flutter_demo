@@ -1,12 +1,19 @@
 // import './pages/provider_page.dart';
 import './pages/sliver_page.dart';
 import 'package:flutter/material.dart';
+import './pages/sliver_page2.dart';
+import './pages/refresh_page.dart';
+import './pages/official_page.dart';
 
 final Map routes = {
   // "/provider": (context, {arguments}) => ProviderPage(
   //       arguments: arguments,
   //     ),
   "/sliver": (context) => SliverPage(),
+  "/sliver2": (context) => NestedPage(),
+  "/refresh": (context) => RefreshPage(),
+  "/official": (context) => OfficialDemoPage(),
+
 };
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
